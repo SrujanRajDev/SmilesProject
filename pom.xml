@@ -5,10 +5,24 @@
     <groupId>com.edurekademo.tutorial</groupId>
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
-    <version>2.0</version>
+    <version>1.0</version>
     <name>Vaadin Addressbook example</name>
+	
+<!--Nexus properties -->
+<distributionManagement>
+    <repository>
+      <id>myapp-releases</id>
+      <name>myapp-releases</name>
+      <url>http://ip-172-31-24-249.ap-south-1.compute.internal:8081/nexus/content/repositories/myapp-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>myapp-snapshots</id>
+      <name>myapp-snapshots</name>
+      <url>http://ip-172-31-24-249.ap-south-1.compute.internal:8081/nexus/content/repositories/myapp-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 
-    <properties>
+<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
