@@ -38,6 +38,6 @@ node {
         sh 'docker pull srujan6868/myaddress'
     }
     stage('Run image') {
-        sh 'docker run -d -p 8082:8082 srujan6868/myaddress'
+        sh 'docker run -d -p 8083:8083 srujan6868/myaddress'
     }
 }
