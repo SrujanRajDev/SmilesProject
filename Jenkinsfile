@@ -35,9 +35,9 @@ node {
         }
     }
     stage('Pull image') {
-        app.pull("srujan6868/myaddress")
+        sh 'docker pull srujan6868/myaddress'
     }
     stage('Run image') {
-        app.run("srujan6868/myaddress")
+        sh 'docker run -d -p 8082:8082 srujan6868/myaddress'
     }
 }
