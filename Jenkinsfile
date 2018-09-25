@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("SrujanRajDev/myaddress")
+        app = docker.build("myaddress")
     }
 
     /* stage('Test image') {
