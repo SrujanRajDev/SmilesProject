@@ -34,4 +34,10 @@ node {
             app.push("latest")
         }
     }
+    stage('Pull image') {
+        app.pull("srujan6868/myaddress")
+    }
+    stage('Run image') {
+        app.run("srujan6868/myaddress")
+    }
 }
