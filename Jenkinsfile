@@ -38,7 +38,7 @@ node {
         sh 'docker pull srujan6868/myaddress'
     }
     stage('Run image') {
-       // sh 'docker run -d -p 8083:8083 srujan6868/myaddress'
-       docker.image('srujan6868/myaddress').withRun('-p 8085:8085') 
+       sh 'docker run -d -p 8083:8083 srujan6868/myaddress'
+       //docker.image('srujan6868/myaddress').withRun('-p 8085:8085') 
     }
 }
