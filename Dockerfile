@@ -32,10 +32,6 @@ RUN cp -Rv /tmp/apache-tomcat-8.5.34/* /usr/local/tomcat/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
 
-# Copy myapp.jar file into tomcat
-#RUN wget http://13.232.163.86:8081/nexus/content/repositories/myapp-releases/com/mycompany/app/my-app/3.0/my-app-3.0.jar
-#RUN cp my-app-3.0.jar /usr/local/tomcat/webapps/
-
 #Copy addressbook.war file into tomcat
 RUN wget http://13.232.21.231:8081/nexus/content/repositories/myapp-releases/com/edurekademo/tutorial/addressbook/2.0/addressbook-2.0.war
 RUN cp addressbook-2.0.war /usr/local/tomcat/webapps/
