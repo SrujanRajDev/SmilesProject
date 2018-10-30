@@ -4,7 +4,7 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-        git clone 'https://github.com/SrujanRajDev/devops.git'
+        git 'https://github.com/SrujanRajDev/devops.git'
     }
 
     stage('Build image') {
