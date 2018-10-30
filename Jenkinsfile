@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("srujan6868/myaddress_30_Oct")
+        app = docker.build("srujan6868/myaddress30Oct")
     }
 
      stage('Test image') {
@@ -35,10 +35,10 @@ node {
         }
     }
     stage('Pull image') {
-        sh 'docker pull srujan6868/myaddress_30_Oct'
+        sh 'docker pull srujan6868/myaddress30Oct'
     }
     stage('Run image') {
-       sh 'docker run -d -p 8081:8081 srujan6868/myaddress_30_Oct'
+       sh 'docker run -d -p 8081:8081 srujan6868/myaddress30Oct'
        //docker.image('srujan6868/myaddress').withRun('-p 8085:8085') 
     }
 }
