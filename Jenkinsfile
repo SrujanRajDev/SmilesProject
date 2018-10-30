@@ -4,7 +4,7 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-        git 'https://github.com/SrujanRajDev/devops.git'
+        git clone 'https://github.com/SrujanRajDev/devops.git'
     }
 
     stage('Build image') {
@@ -35,10 +35,10 @@ node {
         }
     }
     stage('Pull image') {
-        sh 'docker pull srujan6868/myaddress'
+        sh 'docker pull srujan6868/myaddress_30_Oct'
     }
     stage('Run image') {
-       sh 'docker run -d -p 8081:8081 srujan6868/myaddress'
+       sh 'docker run -d -p 8081:8081 srujan6868/myaddress_30_Oct'
        //docker.image('srujan6868/myaddress').withRun('-p 8085:8085') 
     }
 }
