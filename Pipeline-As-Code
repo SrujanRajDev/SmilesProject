@@ -6,4 +6,7 @@ node{
     stage('Compile, Test and Package'){
         sh 'mvn package'
     }
+    stage('Email notification'){
+        mail bcc: '', body: 'Test mail !!!', cc: '', from: '', replyTo: '', subject: 'Pipeline-As-Code', to: 'devigari.srujanraj@gmail.com'
+    }
 }
