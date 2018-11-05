@@ -1,1 +1,7 @@
-
+node{
+    
+    stage('Checkout SCM'){
+        git 'https://github.com/SrujanRajDev/devops.git'
+    }
+    
+}
