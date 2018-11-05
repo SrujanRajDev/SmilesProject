@@ -3,5 +3,7 @@ node{
     stage('Checkout SCM'){
         git 'https://github.com/SrujanRajDev/devops.git'
     }
-    
+    stage('Compile, Test and Package'){
+        sh 'mvn package'
+    }
 }
