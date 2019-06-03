@@ -9,7 +9,7 @@
     <version>1.0</version>
     <name>Vaadin Addressbook example</name>
 	
-<!--Nexus properties -->
+<!--Nexus properties 
 <distributionManagement>
     <repository>
       <id>myapp-releases</id>
@@ -22,7 +22,7 @@
       <url>http://13.127.64.171:8081/nexus/content/repositories/myapp-snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
-
+-->
 <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
