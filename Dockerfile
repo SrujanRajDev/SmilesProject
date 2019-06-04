@@ -29,10 +29,10 @@ RUN mkdir /usr/local/tomcat
 RUN wget http://mirrors.wuchna.com/apachemirror/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-8.5.34/* /usr/local/tomcat/
-EXPOSE 8080
+EXPOSE 8081
 CMD /usr/local/tomcat/bin/catalina.sh run
 
 #Copy addressbook.war file into tomcat
 #RUN wget http://13.127.64.171:8081/nexus/content/repositories/myapp-releases/com/edurekademo/tutorial/addressbook/1.0/addressbook-1.0.war
 RUN wget /var/lib/jenkins/workspace/job1/target/addressbook.war
-RUN cp addressbook-1.0.war /usr/local/tomcat/webapps/
+RUN cp addressbook.war /usr/local/tomcat/webapps/
