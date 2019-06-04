@@ -33,5 +33,6 @@ EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
 
 #Copy addressbook.war file into tomcat
-RUN wget http://13.127.64.171:8081/nexus/content/repositories/myapp-releases/com/edurekademo/tutorial/addressbook/1.0/addressbook-1.0.war
+#RUN wget http://13.127.64.171:8081/nexus/content/repositories/myapp-releases/com/edurekademo/tutorial/addressbook/1.0/addressbook-1.0.war
+RUN wget /var/lib/jenkins/workspace/job1/target/addressbook.war
 RUN cp addressbook-1.0.war /usr/local/tomcat/webapps/
