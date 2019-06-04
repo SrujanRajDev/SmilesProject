@@ -4,7 +4,7 @@ MAINTAINER  Srujan
 
 # Java installation
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
-RUN apt-get -y update
+RUN sudo apt-get -y update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-properties software-properties-common
 ENV JAVA_VER 8
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
@@ -23,8 +23,8 @@ CMD ["/sbin/my_init"]
 
 # Tomcat installation
 FROM ubuntu:latest
-RUN apt-get -y update && apt-get -y upgrade
-RUN apt-get -y install openjdk-8-jdk wget
+# RUN apt-get -y update && apt-get -y upgrade
+# RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /usr/local/tomcat
 RUN wget http://mirrors.wuchna.com/apachemirror/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
