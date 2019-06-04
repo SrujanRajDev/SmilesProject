@@ -6,6 +6,10 @@ node {
         /* Let's make sure we have the repository cloned to our workspace */
         git 'https://github.com/SrujanRajDev/devops.git'
     }
+    
+    stage('package'){
+        sh 'mvn clean package'
+    }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
