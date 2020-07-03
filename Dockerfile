@@ -10,4 +10,4 @@ COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 
 COPY ./addressbook.war /usr/local/tomcat/webapps
 
-EXPOSE 8081
+EXPOSE 8080
